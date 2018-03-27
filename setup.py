@@ -3,8 +3,8 @@ from setuptools import setup
 
 setup(
     name='img_utils',
-    version='0.0.4',
-    packages=['image_utils'],
+    version='0.0.5',
+    packages=['images', 'files', 'colors'],
     url='https://github.com/DewMaple/image_utils',
     description='Convenient functions that help to process images',
     author='dew.maple',
