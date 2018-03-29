@@ -3,9 +3,9 @@ from setuptools import setup
 
 setup(
     name='img_utils',
-    version='0.0.5',
-    packages=['images', 'files', 'colors'],
-    url='https://github.com/DewMaple/image_utils',
+    version='0.0.8',
+    packages=['img_utils', 'img_utils.images', 'img_utils.files', 'img_utils.colors'],
+    url='https://github.com/DewMaple/img_utils',
     description='Convenient functions that help to process images',
     author='dew.maple',
     author_email='dew.maple@gmail.com',
@@ -13,7 +13,8 @@ setup(
     keywords=['computer vision', 'image processing', 'opencv', 'numpy'],
     classifiers=['Programming Language :: Python :: 3.6'],
     project_urls={
-        'Bug Reports': 'https://github.com/DewMaple/image_utils/issues',
-        'Source': 'https://github.com/DewMaple/image_utils',
-    }
+        'Bug Reports': 'https://github.com/DewMaple/img_utils/issues',
+        'Source': 'https://github.com/DewMaple/img_utils',
+    },
+    zip_safe=True
 )

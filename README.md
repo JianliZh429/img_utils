@@ -1,8 +1,8 @@
-# image_utils
+# img_utils
 
 This repository contains some tool functions for image processing.
 
-#Upload process
+# Upload process
 
 ### Source Distributions
 ```
