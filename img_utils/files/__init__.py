@@ -1,6 +1,6 @@
 # author:	dew.maple
 
 # set the version number
-__version__ = "0.0.5"
+__version__ = "0.0.9"
 
-from .file import filename, file_ext
+from .file import images_in_dir, filename, fname
