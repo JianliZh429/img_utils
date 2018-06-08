@@ -77,3 +77,15 @@ def point_on_line_with_distance(point1, point2, distance=50):
     y0 = np.sin(theta) * distance + y2
     x0 = np.cos(theta) * distance + x2
     return x0, y0
+
+
+def minimum_bounding_box(points):
+    np_array = np.array(points)
+    all_x = np_array[:, 0]
+    all_y = np_array[:, 1]
+    max_x = np.amax(all_x)
+    max_y = np.amax(all_y)
+
+    min_x = np.amin(all_x)
+    min_y = np.amin(all_y)
+    return min_x, min_y, max_x, max_y

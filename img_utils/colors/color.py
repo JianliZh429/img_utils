@@ -1,5 +1,5 @@
 import colorsys
-import random
+import numpy as np
 
 
 def random_colors(num_colors, bright=True, darkness=0.7):
@@ -14,5 +14,6 @@ def random_colors(num_colors, bright=True, darkness=0.7):
     for h, s, v in hsv:
         r, g, b = colorsys.hsv_to_rgb(h, s, v)
         colors.append((b, g, r))
-    random.shuffle(colors)
+    colors = np.array(colors) * 255
+    colors = tuple(map(tuple, colors))
     return colors
