@@ -23,8 +23,9 @@ def find_outer_corner(thresholding_img):
 
 
 def put_text(image, txt, position=(30, 30), font_face=cv2.FONT_HERSHEY_SIMPLEX,
-             font_scale=0.65, color=(0, 255, 0), thickness=2):
+             font_scale=0.65, color=(0, 255, 0), thickness=2, background_color=None):
     """
+    :param background_color:
     :param image:       image to draw
     :param txt:         text to put on image
     :param position:    bottom-left of the text on the image
@@ -34,6 +35,10 @@ def put_text(image, txt, position=(30, 30), font_face=cv2.FONT_HERSHEY_SIMPLEX,
     :param thickness:   thickness of the lines used to draw a text
     :return:
     """
+    if background_color is not None:
+        (txt_width, txt_height), baseline = cv2.getTextSize(txt, font_face, font_scale, thickness)
+        cv2.rectangle(image, position, (position[0] + txt_width, position[1] - txt_height),
+                      color=background_color, thickness=-1)
     cv2.putText(image, txt, position, font_face, font_scale, color, thickness)
     return image
 

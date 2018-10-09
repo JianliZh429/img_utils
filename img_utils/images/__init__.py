@@ -1,7 +1,7 @@
 # author:	dew.maple
 
 # set the version number
-__version__ = "0.0.12"
+__version__ = "0.0.13"
 from .geometry import centroid
 from .geometry import minimum_bounding_box
 from .geometry import point_on_axis
